@@ -1,10 +1,12 @@
+import imgDefault from "../images/imgDefault.JPG";
+
 function CharacterList(props) {
   const characterItems = props.character.map((character) => {
     return (
       <li>
         <a href="#">
           <img
-            src={character.image}
+            src={character.image || imgDefault}
             alt={`foto de${character.name}`}
             title={`foto de${character.name}`}
           ></img>
