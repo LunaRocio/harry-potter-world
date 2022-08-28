@@ -2,9 +2,9 @@ function getDataApi() {
   return fetch("http://hp-api.herokuapp.com/api/characters")
     .then((response) => response.json())
     .then((dataApi) => {
-      const dataClean = dataApi.map((character) => {
+      const dataClean = dataApi.map((character, index) => {
         return {
-          id: character.name,
+          id: index,
           name: character.name,
           image: character.image,
           species: character.species,

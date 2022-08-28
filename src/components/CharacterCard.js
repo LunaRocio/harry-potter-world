@@ -1,8 +1,9 @@
 import imgDefault from "../images/imgDefault.JPG";
+import { Link } from "react-router-dom";
 function CharacterCard(props) {
   return (
     <li>
-      <a href="#">
+      <Link to={`/character/${props.character.id}`}>
         <img
           src={props.character.image || imgDefault}
           alt={`Foto de${props.character.name}`}
@@ -10,7 +11,7 @@ function CharacterCard(props) {
         ></img>
         <h4>{props.character.name}</h4>
         <h4>{props.character.species}</h4>
-      </a>
+      </Link>
     </li>
   );
 }
