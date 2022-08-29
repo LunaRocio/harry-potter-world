@@ -1,6 +1,7 @@
 import "../styles/App.scss";
 import getDataApi from "../services/fetch";
 import { useState, useEffect } from "react";
+import ls from "../services/localStorage";
 import CharacterList from "./CharacterList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
@@ -9,7 +10,7 @@ import { matchPath } from "react-router";
 
 function App() {
   //variables de estado
-  const [dataCharacter, setdataCharacter] = useState([]);
+  const [dataCharacter, setdataCharacter] = useState(ls.get("characters", []));
 
   const [filterByHouse, setFilterByHouse] = useState("Gryffindor");
 
@@ -18,6 +19,7 @@ function App() {
   useEffect(() => {
     getDataApi().then((dataFromApi) => {
       console.log(dataFromApi);
+      ls.set("characters", dataFromApi);
       setdataCharacter(dataFromApi);
     });
   }, []);

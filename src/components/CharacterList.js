@@ -16,7 +16,7 @@ function CharacterList(props) {
     </section>
   ) : (
     <section>
-      <h5>Nuestros elfos no encuentran tu busqueda</h5>
+      <h5>Even our best elves can't find {props.filterByName} </h5>
     </section>
   );
 }

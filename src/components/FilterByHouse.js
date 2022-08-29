@@ -5,7 +5,7 @@ function FilterByHouse(props) {
   return (
     <>
       <form>
-        <label htmlFor="house">Casa</label>
+        <label htmlFor="house">Hogwarts Houses</label>
         <select
           name="house"
           id="house"

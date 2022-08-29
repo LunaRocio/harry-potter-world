@@ -1,7 +1,7 @@
 function FilterByName(props) {
   return (
     <form>
-      <label htmlFor="searchName">Filtrar por nombre</label>
+      <label htmlFor="searchName">Accio character</label>
       <input
         type="text"
         name="searchName"
