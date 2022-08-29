@@ -3,7 +3,9 @@ import CharacterCard from "./CharacterCard";
 function CharacterList(props) {
   const characterItems = props.character
     .filter((character) => {
-      return character.name.toLowerCase().includes(props.filterByName);
+      return character.name
+        .toLowerCase()
+        .includes(props.filterByName.toLowerCase());
     })
     .map((character) => {
       return <CharacterCard character={character} key={character.id} />;

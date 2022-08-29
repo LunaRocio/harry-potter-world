@@ -35,7 +35,12 @@ function App() {
   const handleFilterByName = (ev) => {
     setFilterByName(ev.target.value);
   };
+  // reset filters
 
+  const resetFilters = () => {
+    setFilterByHouse("Gryffindor");
+    setFilterByName("");
+  };
   // console.log(htmlCharacter);
   //para obtener el id del usuario clickado
   const { pathname } = useLocation();
@@ -60,6 +65,7 @@ function App() {
                 handleFilterByHouse={handleFilterByHouse}
                 filterByName={filterByName}
                 handleFilterByName={handleFilterByName}
+                resetFilters={resetFilters}
               />
               <CharacterList
                 character={characterFilters}

@@ -3,9 +3,9 @@ import imgDefault from "../images/imgDefault.JPG";
 const CharacterDetail = (props) => {
   const isAlive = () => {
     if (props.character.alive === true) {
-      return "alive";
+      return "alive ♥";
     } else {
-      return "death";
+      return "death ☠";
     }
   };
   const knownAs = () => {
