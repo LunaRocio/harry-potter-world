@@ -13,13 +13,15 @@ function App() {
 
   const [filterByHouse, setFilterByHouse] = useState("Gryffindor");
 
+  const [filterByName, setFilterByName] = useState("");
+
   useEffect(() => {
     getDataApi().then((dataFromApi) => {
       console.log(dataFromApi);
       setdataCharacter(dataFromApi);
     });
   }, []);
-
+  //filtro por casa
   const handleFilterByHouse = (value) => {
     setFilterByHouse(value);
   };
@@ -27,10 +29,19 @@ function App() {
   const characterFilters = dataCharacter.filter((character) => {
     return character.house === filterByHouse;
   });
+  //filtro por nombre
+  const handleFilterByName = (ev) => {
+    setFilterByName(ev.target.value);
+  };
 
+  // console.log(htmlCharacter);
+  //para obtener el id del usuario clickado
   const { pathname } = useLocation();
+  //compruebo que coincide
   const dataPath = matchPath("/character/:characterId", pathname);
+  //compruebo que existe(no es nulo)
   const characterId = dataPath !== null ? dataPath.params.characterId : null;
+  //busco el personaje
   const characterFound = dataCharacter.find((character) => {
     return character.id === parseInt(characterId);
   });
@@ -45,8 +56,13 @@ function App() {
               <Filters
                 filterByHouse={filterByHouse}
                 handleFilterByHouse={handleFilterByHouse}
+                filterByName={filterByName}
+                handleFilterByName={handleFilterByName}
               />
-              <CharacterList character={characterFilters}></CharacterList>
+              <CharacterList
+                character={characterFilters}
+                filterByName={filterByName}
+              ></CharacterList>
             </>
           }
         />
