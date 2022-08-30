@@ -7,9 +7,12 @@ function CharacterList(props) {
         .toLowerCase()
         .includes(props.filterByName.toLowerCase());
     })
+    .sort((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0))
+
     .map((character) => {
       return <CharacterCard character={character} key={character.id} />;
     });
+
   const isInclude = characterItems.length !== 0;
 
   return isInclude ? (

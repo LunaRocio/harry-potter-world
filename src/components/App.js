@@ -10,7 +10,9 @@ import { matchPath } from "react-router";
 
 function App() {
   //variables de estado
-  const [dataCharacter, setdataCharacter] = useState(ls.get("characters", []));
+  const [dataCharacter, setdataCharacter] = useState(
+    ls.get("dataCharacter", [])
+  );
 
   const [filterByHouse, setFilterByHouse] = useState("Gryffindor");
 
