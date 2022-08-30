@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 function FilterByGender(props) {
   const handleChangeGender = (ev) => {
     props.handleFilterByGender(ev.target.value);
@@ -20,5 +21,11 @@ function FilterByGender(props) {
     </>
   );
 }
-
+FilterByGender.defaultProps = {
+  filterByGender: "",
+};
+FilterByGender.propTypes = {
+  filterByGender: PropTypes.string.isRequired,
+  handleFilterByGender: PropTypes.func.isRequired,
+};
 export default FilterByGender;

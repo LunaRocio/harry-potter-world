@@ -7,7 +7,8 @@ import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { matchPath } from "react-router";
-import userEvent from "@testing-library/user-event";
+
+import Header from "./Header";
 
 function App() {
   //variables de estado
@@ -72,7 +73,7 @@ function App() {
   });
   return (
     <>
-      <h1>Harry Potter</h1>
+      <Header />
       <Routes>
         <Route
           path="/"

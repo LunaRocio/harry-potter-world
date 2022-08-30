@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 function FilterByName(props) {
   return (
     <form>
@@ -13,5 +14,11 @@ function FilterByName(props) {
     </form>
   );
 }
-
+FilterByName.defaultProps = {
+  filterByName: "",
+};
+FilterByName.propTypes = {
+  filterByName: PropTypes.string.isRequired,
+  handleFilterByName: PropTypes.func.isRequired,
+};
 export default FilterByName;
