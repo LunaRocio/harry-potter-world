@@ -7,6 +7,7 @@ import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { matchPath } from "react-router";
+import userEvent from "@testing-library/user-event";
 
 function App() {
   //variables de estado
@@ -17,6 +18,8 @@ function App() {
   const [filterByHouse, setFilterByHouse] = useState("Gryffindor");
 
   const [filterByName, setFilterByName] = useState("");
+
+  const [filterByGender, setFilterByGender] = useState("All");
 
   useEffect(() => {
     getDataApi().then((dataFromApi) => {
@@ -30,9 +33,22 @@ function App() {
     setFilterByHouse(value);
   };
 
-  const characterFilters = dataCharacter.filter((character) => {
-    return character.house === filterByHouse;
-  });
+  const characterFilters = dataCharacter
+    .filter((character) => {
+      return character.house === filterByHouse;
+    })
+    .filter((character) => {
+      if (filterByGender === "All") {
+        return true;
+      } else {
+        return character.gender === filterByGender;
+      }
+    });
+  //filtro por genero
+  const handleFilterByGender = (value) => {
+    setFilterByGender(value);
+  };
+
   //filtro por nombre
   const handleFilterByName = (ev) => {
     setFilterByName(ev.target.value);
@@ -67,6 +83,8 @@ function App() {
                 handleFilterByHouse={handleFilterByHouse}
                 filterByName={filterByName}
                 handleFilterByName={handleFilterByName}
+                filterByGender={filterByGender}
+                handleFilterByGender={handleFilterByGender}
                 resetFilters={resetFilters}
               />
               <CharacterList
