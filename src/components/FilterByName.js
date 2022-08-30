@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
 function FilterByName(props) {
   return (
-    <form>
-      <label htmlFor="searchName">Accio character</label>
+    <>
+      <label htmlFor="searchName" className="filter__label">
+        Accio character
+      </label>
       <input
+        className="filter__input"
         type="text"
         name="searchName"
         id="searchName"
@@ -11,7 +14,7 @@ function FilterByName(props) {
         onChange={props.handleFilterByName}
         value={props.filterByName}
       ></input>
-    </form>
+    </>
   );
 }
 FilterByName.defaultProps = {

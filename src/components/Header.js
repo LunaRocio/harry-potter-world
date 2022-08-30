@@ -1,7 +1,7 @@
 function Header() {
   return (
     <>
-      <h1>Harry Potter</h1>
+      <div className="header"></div>
     </>
   );
 }

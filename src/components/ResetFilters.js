@@ -3,7 +3,11 @@ function ResetFilters(props) {
     ev.preventDefault();
     props.resetFilters();
   };
-  return <button onClick={handleReset}>Finite incantatem</button>;
+  return (
+    <button className="button" onClick={handleReset}>
+      Finite Incantatem
+    </button>
+  );
 }
 
 export default ResetFilters;

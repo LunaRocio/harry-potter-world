@@ -1,0 +1,44 @@
+@import 'core/reset';
+@import 'core/variable';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/detail';
+
+body{
+    background-image:url(../images/background.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 20px;
+    
+    
+
+}
+::marker {
+    color: transparent;
+    
+  }
+:link{
+    text-decoration: none;
+}
+
+::placeholder {
+    color:#a4a2a2;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+
+    border-radius: 1cm;
+    
+}
+.button{
+    background-color: #0e0b67; 
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin-top: 15px;
+}

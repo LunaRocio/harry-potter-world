@@ -1,0 +1,66 @@
+.filter{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: fit-content;
+    margin: 15px;
+    
+
+    &__label{
+        font-family: $harryFont;
+        
+        color: white;
+        font-size: 25px;
+    }
+    &__input{
+        max-width: fit-content;
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+    }
+    &__select{
+        max-width: fit-content;
+        margin-bottom: 10px;
+        
+        
+        
+        background-color: #EFEFEF;
+        border: none;
+        padding: 0 1em 0 0;
+        margin: 0;
+        width: 100%;
+        
+        font-size: large;
+        cursor: inherit;
+        line-height: inherit;
+    }
+}
+
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #fcedf45d;
+    
+    &__li
+        
+    {
+        
+        margin-right: 1vw;
+        &--img{
+            max-width: 15vw;
+            height: 40vh;
+            background-color: #fcedf45d;
+
+        }
+        &--h4{
+            max-width: 15vw;
+            color: white;
+            
+            
+        }
+        
+    }
+}
+

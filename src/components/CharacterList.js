@@ -17,11 +17,13 @@ function CharacterList(props) {
 
   return isInclude ? (
     <section>
-      <ul>{characterItems}</ul>
+      <ul className="list">{characterItems}</ul>
     </section>
   ) : (
     <section>
-      <h5>Even our best elves can't find {props.filterByName} </h5>
+      <h5 className="notFound">
+        Even our best elves can't find {props.filterByName}{" "}
+      </h5>
     </section>
   );
 }

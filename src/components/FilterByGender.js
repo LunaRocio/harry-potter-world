@@ -5,11 +5,14 @@ function FilterByGender(props) {
   };
   return (
     <>
-      <form>
-        <label htmlFor="gender">Gender</label>
+      <>
+        <label htmlFor="gender" className="filter__label">
+          Gender
+        </label>
         <select
           name="gender"
           id="gender"
+          className="filter__select"
           value={props.filterByGender}
           onChange={handleChangeGender}
         >
@@ -17,7 +20,7 @@ function FilterByGender(props) {
           <option value="female">Female</option>
           <option value="male">Male</option>
         </select>
-      </form>
+      </>
     </>
   );
 }

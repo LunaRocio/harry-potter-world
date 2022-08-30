@@ -1,0 +1,28 @@
+.detail{
+    background-image: url(../../images/bgdetail.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+    background-position: center;
+    margin-right: 1vw;
+        &__img{
+            max-width: 40vw;
+            height: 60vh;
+            background-color: #fcedf45d;
+
+        }
+        &__h4{
+            max-width: 40vw;
+            color: white;
+            font-size: large;
+            
+            
+        }
+        &__h5{
+            max-width: 40vw;
+            color: white;
+            font-size: medium;
+            
+            
+        }
+}
