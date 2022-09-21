@@ -1,6 +1,7 @@
 .filter{
     display: flex;
     flex-direction: column;
+    
     flex-wrap: nowrap;
     max-width: fit-content;
     margin: 15px;
@@ -8,12 +9,15 @@
 
     &__label{
         font-family: $harryFont;
+        font-size: 30px;
+        font-weight:bold;
+        background: linear-gradient(rgb(237, 237, 162),rgb(242, 80, 80));
+        -webkit-background-clip: text;
+         color: transparent;  
         
-        color: white;
-        font-size: 25px;
     }
     &__input{
-        max-width: fit-content;
+        max-width: max-content;
         width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
@@ -21,18 +25,17 @@
     &__select{
         max-width: fit-content;
         margin-bottom: 10px;
-        
-        
-        
+        color: rgb(142, 140, 140);
         background-color: #EFEFEF;
         border: none;
-        padding: 0 1em 0 0;
-        margin: 0;
+        padding:12px 20px;
         width: 100%;
-        
         font-size: large;
         cursor: inherit;
         line-height: inherit;
+        text-align: center;
+        font-weight:bold;
+        
     }
 }
 
@@ -41,7 +44,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #fcedf45d;
+    
     
     &__li
         

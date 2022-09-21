@@ -21,6 +21,7 @@ function App() {
   const [filterByName, setFilterByName] = useState("");
 
   const [filterByGender, setFilterByGender] = useState("All");
+  const [filterBySpecie, setFilterBySpecie] = useState("");
 
   useEffect(() => {
     getDataApi().then((dataFromApi) => {
@@ -53,6 +54,10 @@ function App() {
   //filtro por nombre
   const handleFilterByName = (ev) => {
     setFilterByName(ev.target.value);
+  };
+  //filtro por especie
+  const handleFilterBySpecie = (ev) => {
+    setFilterBySpecie(ev.target.value);
   };
   // reset filters
 
@@ -87,10 +92,13 @@ function App() {
                 filterByGender={filterByGender}
                 handleFilterByGender={handleFilterByGender}
                 resetFilters={resetFilters}
+                filterBySpecie={filterBySpecie}
+                handleFilterBySpecie={handleFilterBySpecie}
               />
               <CharacterList
                 character={characterFilters}
                 filterByName={filterByName}
+                filterBySpecie={filterBySpecie}
               ></CharacterList>
             </>
           }
