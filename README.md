@@ -9,4 +9,6 @@ React
 How can you start my project?
 To start this project we need to run the command /npm start/
 This command opens a window in our default browser and shows you my project.
+Here you can search your favourite character and filter by house and gender.
+
 Rocío.
