@@ -7,6 +7,11 @@ function CharacterList(props) {
         .toLowerCase()
         .includes(props.filterByName.toLowerCase());
     })
+    .filter((character) => {
+      return character.species
+        .toLowerCase()
+        .includes(props.filterBySpecie.toLowerCase());
+    })
     .sort((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0))
 
     .map((character) => {

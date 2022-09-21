@@ -15,7 +15,7 @@ function getDataApi() {
         };
       });
 
-      return dataClean.sort();
+      return dataClean;
     });
 }
 
